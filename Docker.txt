@@ -1,0 +1,28 @@
+====COMANDOS:
+ $: docker image ls := listar imagens baixadas ou disponiveis 
+ $: docker build := correr o Dockerfile
+	-ex: docker build -t mysql-image -f api/db/Dockerfile .
+	-inf: O ponto(.) quer dizer que o contesto para gerar a imagem vai ser a pasta actual
+	(Ou seja, como se a imagem estivesse sendo construida na pasta actual)
+ $: docker ps := lista de container/imagens a correr
+ $: docker run := correr um container
+	-ex:  docker run -d --rm --name mysql-container mysql-image
+	-inf: ªmysql-containerª é o nome do container que está a se criar usando a imagem ªmysql-imageª
+ $: docker exec: Quer dizer que vamos executar um comando que está dentro de um container que está rodando
+	-ex: docker exec -i mysql-container mysql -uroot -permanadmin < api/db/script.sql
+	-ex2: docker exec -it mysql-container /bin/bash
+ $: docker inspect mysql-container := Informacao do container(host, ip ...)
+
+
+
+ $: docker cp hoge.sql [cotaier-id]:/hoge.sql := Copiar um ficheiro para o container
+ 
+
+====TAGS
+ -t (tag):= para dar um nome a imagem
+ -f (file):= para especificar o ficheiro Dockerfile
+ -d (detach):= Correr comandos em background
+ --rm := Remove o container se ja existe para um novo
+ --name := para definir o nome do container 
+ -i := executar o comando no modo interactivo
+

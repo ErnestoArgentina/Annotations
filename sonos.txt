@@ -1,0 +1,10 @@
+
+===pagina inicial
+1. Parde do registro funcionar
+2. 
+
+== cursos
+1. gerar uma factura na inscricao do curso
+2. tirar a descricao do modulo no modal detalhes
+3. inscricao nao funcionando
+4. filtro combobox nao funcionando
