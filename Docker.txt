@@ -12,7 +12,7 @@
 	-ex: docker exec -i mysql-container mysql -uroot -permanadmin < api/db/script.sql
 	-ex2: docker exec -it mysql-container /bin/bash
  $: docker inspect mysql-container := Informacao do container(host, ip ...)
-
+ 
 
 
  $: docker cp hoge.sql [cotaier-id]:/hoge.sql := Copiar um ficheiro para o container
@@ -25,4 +25,16 @@
  --rm := Remove o container se ja existe para um novo
  --name := para definir o nome do container 
  -i := executar o comando no modo interactivo
+ -p
+ -v 
+
+
+
+
+
+
+
+================================
+Volume e porta...
+	$: docker run -d --rm -p 3306:3306 -v C:/DockerDev/mysql:/var/lib/mysql --name mysql-container mysql-image 
 
