@@ -16,6 +16,7 @@
 
 
  $: docker cp hoge.sql [cotaier-id]:/hoge.sql := Copiar um ficheiro para o container
+	-: docker cp nginx:/etc/nginx/conf.d/default.conf .
  
 
 ====TAGS
@@ -27,6 +28,12 @@
  -i := executar o comando no modo interactivo
  -p
  -v 
+
+
+
+==== DOCKER COMPOSE
+$: docker-compose build
+$: docker-compose up -d
 
 
 
