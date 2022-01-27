@@ -1,0 +1,10 @@
+Dependecies error on installing 
+-------------------------------
+ ex:  Problem 1
+    - Root composer.json requires beyondcode/laravel-websockets ^1.12 -> satisfiable by beyondcode/laravel-websockets[1.12.0, 1.x-dev].
+    - beyondcode/laravel-websockets[1.12.0, ..., 1.x-dev] require guzzlehttp/psr7 ^1.5 -> found guzzlehttp/psr7[1.5.0, ..., 1.x-dev] but the package is fixed to 2.1.0 
+(lock file version) by a partial update and that version does not match. Make sure you list it as an argument for the update command.
+
+ sol: run the composer command with --with-all-dependencies (-W) option
+ ex: composer require beyondcode/laravel-websockets --with-all-dependencies
+-----------------------------------------------------------------------------
